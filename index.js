@@ -1,25 +1,11 @@
-import React from "react";
-import { AppRegistry, StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import TextCard from './src/TextCard'
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  hello: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10,
-    color: '#000000'
-  }
-});
-
-HelloWorld = () => {
+let App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.hello}>WELCOME</Text>
-    </View>
+    <TextCard textValue={"Welcome to React Native Realm!!"}/>
   );
 }
 
-AppRegistry.registerComponent("Vaults", () => HelloWorld);
+AppRegistry.registerComponent("Vaults", () => App);
