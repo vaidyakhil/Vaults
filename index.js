@@ -1,8 +1,9 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import TextCard from './src/TextCard'
+import { components } from './src'
 
 let App = () => {
+  const { TextCard } = components;
   return (
     <TextCard textValue={"Welcome to React Native Realm!!"}/>
   );
