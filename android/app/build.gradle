@@ -11,14 +11,13 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
-    compileSdk 32
-
+    compileSdk compile_sdk
     defaultConfig {
         applicationId "com.vaidyakhil.vaults"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        minSdk min_sdk
+        targetSdk target_sdk
+        versionCode version_code
+        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -49,7 +48,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //react-native
-    implementation "com.facebook.react:react-native:0.66.4"
+    implementation "com.facebook.react:react-native:$react_native_version"
 
     //Hermes Dependencies Setup here...
     if (enableHermes) {
