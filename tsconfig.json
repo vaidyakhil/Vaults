@@ -10,7 +10,27 @@
       "noEmit": true,
       "strict": true,
       "target": "esnext",
-      "skipLibCheck": true
+      "skipLibCheck": true,
+
+      "allowUnreachableCode": false,
+      "alwaysStrict": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "strictNullChecks": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noUnusedParameters": false,
+      "noUnusedLocals": true,
+      "declaration": true,
+      "experimentalDecorators": true,
     },
-    "include": ["src"]
-  }
+    "exclude": [
+        "node_modules",
+        "babel.config.js",
+        "metro.config.js",
+        "jest.config.js",
+        "android"
+    ]
+}

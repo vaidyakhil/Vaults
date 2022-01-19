@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "android": "npx react-native run-android",
-    "start": "npx react-native start",
+    "start": "npx react-native start --reset-cache",
     "adb-reverse": "adb reverse tcp:8081 tcp:8081",
-    "tsc": "npx tsc",
-    "metro-reset": "watchman watch-del-all; rm -rf /tmp/metro-*; npm run start --reset-cache"
+    "tsc": "npx tsc"
   },
   "author": "vaidyakhil",
   "license": "ISC",
