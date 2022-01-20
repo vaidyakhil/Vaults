@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { TextCardProps } from "../../component_schema";
 
 const styles = StyleSheet.create({  
     container: {
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
 });
 
 
-const TextCard: React.FunctionComponent<{ textValue: string }> = ({ textValue }) => {
+const TextCard: React.FunctionComponent<TextCardProps> = ({ textValue }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.hello}>{textValue}</Text>
