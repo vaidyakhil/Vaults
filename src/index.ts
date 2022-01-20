@@ -1,5 +1,5 @@
-import * as components from "./components";
+import App from "./App";
 
 export {
-    components
+    App
 }
