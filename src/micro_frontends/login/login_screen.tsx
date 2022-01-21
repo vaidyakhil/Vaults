@@ -2,11 +2,16 @@ import { VaultsComponentTypes } from "../../component_schema";
 import { BaseScreen, SCREEN_POSITION } from "../../infra_schema";
 
 const clickHandler = (data: any) => {
+    console.log('\n --- \n');
     console.log('CLICK HANDLER GETTING CALLED FROM LOGIN');
+    console.log('\n --- \n');    
 }
 
 const LoginScreen: BaseScreen = {
     getScreenData: (initData: any) => {
+        console.log('\n --- \n');
+        console.log('getScreenData GETTING CALLED IN LOGIN WITH INIT DATA: ', initData);
+        console.log('\n --- \n');
         return {
             layout: [
                 {
