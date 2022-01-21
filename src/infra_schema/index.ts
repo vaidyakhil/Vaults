@@ -1,6 +1,11 @@
 import { VaultsComponentTypes } from "../component_schema";
 import { ROUTES } from "../config/routes";
 
+export type NavigationModule = {
+    push: (screenRouteData: ScreenRouteData) => void;
+    pop: () => void;
+}
+
 export enum SCREEN_POSITION {
     FIXED_TOP = 'FIXED_TOP',
     FIXED_BOTTOM = 'FIXED_BOTTOM'
@@ -17,7 +22,11 @@ export type ScreenStructure = {
     dataStore: object
 }
 
-export type ActionFn = (data: any) => void;
+export type ActionUtilities = {
+    navigationModule: NavigationModule
+}
+
+export type ActionFn = (data: any, utilities: ActionUtilities) => void;
 
 export type BaseScreen = {
     getScreenData: (initData: any) => ScreenStructure;
@@ -27,10 +36,5 @@ export type BaseScreen = {
 export type ScreenRouteData = {
     route: ROUTES, 
     initData: any;
-}
-
-export type NavigationModule = {
-    push: (screenRouteData: ScreenRouteData) => void;
-    pop: () => void;
 }
 

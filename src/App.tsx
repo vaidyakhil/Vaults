@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScreenRouteData, ScreensContainer } from './infra';
+import { ScreensContainer } from './infra';
+import { ScreenRouteData } from './infra_schema';
 import { AppProps } from './component_schema';
 import { ROUTES } from './config/routes';
 
