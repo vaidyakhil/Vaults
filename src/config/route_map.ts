@@ -1,4 +1,4 @@
-import { BaseScreen } from "../infra";
+import { BaseScreen } from "../infra_schema";
 import { ROUTES } from "./routes";
 import Login from '../micro_frontends/login'
 import SignUp from '../micro_frontends/sign_up'

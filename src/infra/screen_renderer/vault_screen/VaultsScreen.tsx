@@ -6,6 +6,7 @@ import PropsComponentMap from "../../../components/props_component_map";
 import RoutesMap from "../../../config/route_map";  
 import HeaderComponent from "./header_component";
 import FooterComponent from "./footer_component";
+import { ActionData } from "../../../components/types";
 
 const styles = StyleSheet.create({
     container: {
@@ -16,9 +17,16 @@ const styles = StyleSheet.create({
 
 const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData} }> = ({ route: { params}}) => {  
     const { route, initData } = params;
-    
     const screen = RoutesMap[route];
     const { layout, dataStore } = screen.getScreenData(initData);
+
+    const handleAction = (actionData: ActionData) => {
+        const actionMap = screen.actionMap;
+        if (actionMap && actionData.type && actionMap[actionData.type]) {
+            actionMap[actionData.type](actionData.data);
+        }
+    }
+    
     const headerItems = _filter(layout, { position: SCREEN_POSITION.FIXED_TOP });
     const footerItems = _filter(layout, { position: SCREEN_POSITION.FIXED_BOTTOM });
     const listItems = _difference(layout, [...headerItems, ...footerItems]);
@@ -28,7 +36,7 @@ const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData} 
         const itemComponentProps = dataStore[item.id];
         const ItemComponent = PropsComponentMap[item.type]
         return (
-            <ItemComponent {...itemComponentProps} key={item.id} />
+            <ItemComponent {...itemComponentProps} handleAction={handleAction} key={item.id} />
         )
     }
 
