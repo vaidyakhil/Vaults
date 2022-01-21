@@ -1,5 +1,5 @@
-import { RouteGroupConfig } from "@react-navigation/native";
-import { ROUTES } from "../../config/routes";
+import { Components } from "../component_schema";
+import { ROUTES } from "../config/routes";
 
 export enum SCREEN_POSITION {
     FIXED_TOP = 'FIXED_TOP',
@@ -8,7 +8,7 @@ export enum SCREEN_POSITION {
 
 export type LayoutElement = {
     id: string;
-    type: string;
+    type: Components;
     position?: SCREEN_POSITION;
 }
 
@@ -20,7 +20,7 @@ export type ScreenStructure = {
 export type ActionFn = (data: any) => void;
 
 export type BaseScreen = {
-    loadPage: (initData: any) => ScreenStructure;
+    getScreenData: (initData: any) => ScreenStructure;
     actionMap?: { [key in string]: ActionFn }
 }
 

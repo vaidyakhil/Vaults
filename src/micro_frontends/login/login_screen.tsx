@@ -2,8 +2,11 @@ import { BaseScreen, ScreenStructure } from "../../infra";
 
 const LoginScreen: BaseScreen = {
     
-    loadPage: function (initData: any): ScreenStructure {
-        throw new Error("Function not implemented.");
+    getScreenData: function (initData: any): ScreenStructure {
+        return {
+            layout: [],
+            dataStore: {}
+        }
     },
 
     actionMap: {
