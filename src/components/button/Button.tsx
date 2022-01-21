@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { ButtonProps } from "../../component_schema/button";
-import { VaultComponents } from "../types";
+import { ButtonProps } from "../../component_schema";
+import { VaultsComponent } from "../types";
 
 const styles = StyleSheet.create({  
     container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 });
 
 
-const Button: VaultComponents<ButtonProps> = ({ buttonText, tapAction, handleAction }) => {
+const Button: VaultsComponent<ButtonProps> = ({ buttonText, tapAction, handleAction }) => {
 
     const onClick = () => {
       if (handleAction && tapAction) {
@@ -29,7 +29,6 @@ const Button: VaultComponents<ButtonProps> = ({ buttonText, tapAction, handleAct
         <TouchableOpacity style={styles.container} onPress={onClick}>
           <Text
             style={styles.buttonText}
-            align
           >
             {buttonText}
           </Text>

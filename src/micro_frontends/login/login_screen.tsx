@@ -1,4 +1,4 @@
-import { Components } from "../../component_schema";
+import { VaultsComponentTypes } from "../../component_schema";
 import { BaseScreen, SCREEN_POSITION } from "../../infra_schema";
 
 const clickHandler = (data: any) => {
@@ -11,12 +11,12 @@ const LoginScreen: BaseScreen = {
             layout: [
                 {
                     id: 'header',
-                    type: Components.TEXT_CARD,
+                    type: VaultsComponentTypes.TEXT_CARD,
                     position: SCREEN_POSITION.FIXED_TOP
                 },
                 {
                     id: 'footer',
-                    type: Components.BUTTON,
+                    type: VaultsComponentTypes.BUTTON,
                     position: SCREEN_POSITION.FIXED_BOTTOM
                 },
             ],

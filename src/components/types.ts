@@ -1,12 +1,8 @@
 import React from "react";
-
-export type ActionData = {
-    type: string;
-    data: any;
-}
+import { ActionData } from "../component_schema";
 
 export type CommonWidgetProps = {
     handleAction: (actionData: ActionData) => void;
-}
+};
 
-export type VaultComponents<T> = React.FunctionComponent<T & CommonWidgetProps>
+export type VaultsComponent<T> = React.FunctionComponent<T & CommonWidgetProps>;
