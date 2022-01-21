@@ -1,10 +1,30 @@
 import React from 'react';
-import { TextCard } from './components';
+import { ScreenRouteData, ScreensContainer } from './infra';
+import { AppProps } from './component_schema';
+import { ROUTES } from './config/routes';
 
-const App = () => {
+const getInitialScreenRouteData = (props: AppProps): ScreenRouteData => {
+  const { isUserLoggedIn } = props;
+
+  if (!isUserLoggedIn) {
+    return {
+      route: ROUTES.SIGN_UP_SCREEN,
+      initData: {}
+    }
+  }
+
+  return {
+    route: ROUTES.LOGIN_SCREEN,
+    initData: {}
+  }
+}; 
+
+const App: React.FunctionComponent<AppProps> = (props) => {
+  const screenProps = getInitialScreenRouteData(props);
+
   return (
-    <TextCard textValue={"Welcome to React Native Realm!!"}/>
-  );
+    <ScreensContainer {...screenProps}/>
+  )
 }
 
 export default App;
