@@ -1,4 +1,4 @@
-import { ActionData } from "../../components/types";
+import { ActionData } from "../types";
 
 export type ButtonProps = {
     buttonText: string;

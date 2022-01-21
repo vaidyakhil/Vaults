@@ -1,4 +1,4 @@
-import { Components } from "../component_schema";
+import { VaultsComponentTypes } from "../component_schema";
 import { ROUTES } from "../config/routes";
 
 export enum SCREEN_POSITION {
@@ -8,7 +8,7 @@ export enum SCREEN_POSITION {
 
 export type LayoutElement = {
     id: string;
-    type: Components;
+    type: VaultsComponentTypes;
     position?: SCREEN_POSITION;
 }
 

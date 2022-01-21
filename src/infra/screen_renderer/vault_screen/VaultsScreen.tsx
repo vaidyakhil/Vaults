@@ -6,7 +6,7 @@ import PropsComponentMap from "../../../components/props_component_map";
 import RoutesMap from "../../../config/route_map";  
 import HeaderComponent from "./header_component";
 import FooterComponent from "./footer_component";
-import { ActionData } from "../../../components/types";
+import { ActionData } from "../../../component_schema";
 
 const styles = StyleSheet.create({
     container: {

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TextCardProps } from "../../component_schema";
-import { VaultComponents } from "../types";
+import { VaultsComponent } from "../types";
 
 const styles = StyleSheet.create({  
     container: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 });
 
 
-const TextCard: VaultComponents<TextCardProps> = ({ textValue }) => {
+const TextCard: VaultsComponent<TextCardProps> = ({ textValue }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.hello}>{textValue}</Text>
