@@ -1,4 +1,4 @@
-import { VaultsComponentTypes } from '../../component_schema';
+import { ButtonTypeToken, VaultsComponentTypes } from '../../component_schema';
 import { BaseScreen, SCREEN_POSITION } from '../../infra_schema';
 
 const clickHandler = (data: any) => {
@@ -30,7 +30,8 @@ const LoginScreen: BaseScreen = {
                     buttonText: 'Submit',
                     tapAction: {
                         type: 'ON_SUBMIT'
-                    }
+                    },
+                    buttonTypeToken: ButtonTypeToken.PRIMARY_BIG
                 },
             }
         }
