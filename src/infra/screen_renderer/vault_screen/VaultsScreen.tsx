@@ -32,7 +32,7 @@ const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData};
     const { layout, dataStore } = screen.getScreenData(initData);
 
     const handleAction = (actionData: ActionData) => {
-        const actionMap = screen.actionMap;
+        const { actionMap } = screen;
         const utilities = getUtilitiesObject({ navigation });
         if (actionMap && actionData.type && actionMap[actionData.type]) {
             actionMap[actionData.type](actionData.data, utilities);
@@ -46,7 +46,7 @@ const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData};
 
     const renderItem = ({ item }: { item: LayoutElement, index?: number }) => {
         const itemComponentProps = dataStore[item.id];
-        const ItemComponent = PropsComponentMap[item.type]
+        const ItemComponent = PropsComponentMap[item.type];
         return (
             <ItemComponent {...itemComponentProps} handleAction={handleAction} key={item.id} />
         )

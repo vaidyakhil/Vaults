@@ -1,5 +1,5 @@
-import { ColorTokens } from "../../component_schema";
-import ColorTokenMap from "../color_map";
+import { ColorTokens } from '../../component_schema';
+import ColorTokenMap from '../color_map';
 
 const primaryButtonStyles = {
     container: { backgroundColor: ColorTokenMap[ColorTokens.PURPLE_100] },
