@@ -1,6 +1,13 @@
+export enum ColorTokens {
+    PURPLE_100 = 'PURPLE_100',
+    BLACK_100 = 'BLACK_100',
+    WHITE_100 = 'WHITE_100',
+}
+
 export enum VaultsComponentTypes {
     TEXT_CARD = 'TEXT_CARD',
-    BUTTON = 'BUTTON'
+    BUTTON = 'BUTTON',
+    INPUT_TEXT_FIELD = 'INPUT_TEXT_FIELD'
 }
 
 export enum ButtonTypeToken {
@@ -16,8 +23,16 @@ export type ActionData = {
     data: any;
 }
 
-export enum ColorTokens {
-    PURPLE_100 = 'PURPLE_100',
-    BLACK_100 = 'BLACK_100',
-    WHITE_100 = 'WHITE_100',
+export enum KeyboardType {
+    DEFAULT = 'default',
+    NUMERIC = 'numeric',
+    EMAIL = 'email-address',
+    PHONE_PAD = 'phone-pad',
+}
+
+export enum KeyboardReturnKeyType {
+    DEFAULT = 'default',
+    NUMERIC = 'numeric',
+    EMAIL = 'email-address',
+    PHONE_PAD = 'phone-pad',
 }
