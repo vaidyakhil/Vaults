@@ -1,4 +1,4 @@
-import ScreensContainer from "./ScreenContainer";
+import ScreensContainer from './ScreenContainer';
 
 export {
     ScreensContainer

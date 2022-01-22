@@ -1,6 +1,6 @@
-import { VaultsComponentTypes } from "../../component_schema";
-import { ActionUtilities, BaseScreen, SCREEN_POSITION } from "../../infra_schema";
-import { ROUTES } from "../../routes";
+import { VaultsComponentTypes } from '../../component_schema';
+import { ActionUtilities, BaseScreen, SCREEN_POSITION } from '../../infra_schema';
+import { ROUTES } from '../../routes';
 
 const clickHandler = (data: any, utilities: ActionUtilities) => {
     console.log('\n --- \n');

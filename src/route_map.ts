@@ -1,7 +1,7 @@
-import { BaseRouteMap } from "./infra_schema";
+import { BaseRouteMap } from './infra_schema';
 import Login from './micro_frontends/login'
 import SignUp from './micro_frontends/sign_up'
-import { ROUTES } from "./routes";
+import { ROUTES } from './routes';
 
 const RoutesMap: BaseRouteMap = {
     [ROUTES.SIGN_UP_SCREEN]: SignUp.signUpScreen,

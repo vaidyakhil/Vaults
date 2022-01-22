@@ -1,4 +1,4 @@
-import VaultsScreen from "./VaultsScreen";
+import VaultsScreen from './VaultsScreen';
 
 export {
     VaultsScreen

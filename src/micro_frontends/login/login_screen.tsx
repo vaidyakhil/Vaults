@@ -1,5 +1,5 @@
-import { VaultsComponentTypes } from "../../component_schema";
-import { BaseScreen, SCREEN_POSITION } from "../../infra_schema";
+import { VaultsComponentTypes } from '../../component_schema';
+import { BaseScreen, SCREEN_POSITION } from '../../infra_schema';
 
 const clickHandler = (data: any) => {
     console.log('\n --- \n');

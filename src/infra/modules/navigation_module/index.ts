@@ -1,5 +1,5 @@
-import { NavigationModule, ScreenRouteData } from "../../../infra_schema";
-import { VAULTS_SCREEN } from "../../types";
+import { NavigationModule, ScreenRouteData } from '../../../infra_schema';
+import { VAULTS_SCREEN } from '../../types';
 
 
 const NavigationModuleImpl = (navigator: any): NavigationModule => {
