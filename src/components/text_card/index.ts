@@ -1,4 +1,4 @@
-import TextCard from "./TextCard";
+import TextCard from './TextCard';
 
 export {
     TextCard

@@ -1,4 +1,4 @@
-import { VaultsComponentTypes } from "../component_schema";
+import { VaultsComponentTypes } from '../component_schema';
 
 export type NavigationModule = {
     push: (screenRouteData: ScreenRouteData) => void;

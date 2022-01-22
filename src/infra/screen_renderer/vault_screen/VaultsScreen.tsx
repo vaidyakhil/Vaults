@@ -1,13 +1,13 @@
-import React from "react";
-import { FlatList, SafeAreaView, StyleSheet } from "react-native";
+import React from 'react';
+import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import { filter as _filter, difference as _difference, map as _map } from 'lodash-es';
-import { ActionUtilities, LayoutElement, NavigationModule, ScreenRouteData, SCREEN_POSITION } from "../../../infra_schema";
-import { ActionData } from "../../../component_schema";
-import { PropsComponentMap } from "../../../components";
-import HeaderComponent from "./header_component";
-import FooterComponent from "./footer_component";
-import NavigationModuleImpl from "../../modules/navigation_module";
-import ExternalDependencies from "../../external_dependencies";
+import { ActionUtilities, LayoutElement, ScreenRouteData, SCREEN_POSITION } from '../../../infra_schema';
+import { ActionData } from '../../../component_schema';
+import { PropsComponentMap } from '../../../components';
+import HeaderComponent from './header_component';
+import FooterComponent from './footer_component';
+import NavigationModuleImpl from '../../modules/navigation_module';
+import ExternalDependencies from '../../external_dependencies';
 
 const styles = StyleSheet.create({
     container: {
@@ -84,6 +84,6 @@ const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData};
             }
         </SafeAreaView>
     );
-}
+};
 
 export default VaultsScreen;

@@ -1,11 +1,11 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { ButtonProps } from "../../component_schema";
-import { VaultsComponent } from "../types";
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { ButtonProps } from '../../component_schema';
+import { VaultsComponent } from '../types';
 
 const styles = StyleSheet.create({  
     container: {
-      justifyContent: "center",
+      justifyContent: 'center',
       backgroundColor: '#6200EE',
       borderRadius: 6,
     },
