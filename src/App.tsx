@@ -2,7 +2,8 @@ import React from 'react';
 import { ScreensContainer } from './infra';
 import { ScreenRouteData } from './infra_schema';
 import { AppProps } from './component_schema';
-import { ROUTES } from './config/routes';
+import { ROUTES } from './routes';
+import RoutesMap from './route_map';
 
 const getInitialScreenRouteData = (props: AppProps): ScreenRouteData => {
   const { isUserLoggedIn } = props;
@@ -24,7 +25,7 @@ const App: React.FunctionComponent<AppProps> = (props) => {
   const screenProps = getInitialScreenRouteData(props);
 
   return (
-    <ScreensContainer {...screenProps}/>
+    <ScreensContainer {...{ screeeData: screenProps, _routeMap: RoutesMap }}/>
   )
 }
 

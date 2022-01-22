@@ -1,5 +1,4 @@
 import { VaultsComponentTypes } from "../component_schema";
-import { ROUTES } from "../config/routes";
 
 export type NavigationModule = {
     push: (screenRouteData: ScreenRouteData) => void;
@@ -34,7 +33,8 @@ export type BaseScreen = {
 }
 
 export type ScreenRouteData = {
-    route: ROUTES, 
+    route: string, 
     initData: any;
 }
 
+export type BaseRouteMap = { [key in string]: BaseScreen };

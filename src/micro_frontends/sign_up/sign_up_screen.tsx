@@ -1,6 +1,6 @@
 import { VaultsComponentTypes } from "../../component_schema";
-import { ROUTES } from "../../config";
 import { ActionUtilities, BaseScreen, SCREEN_POSITION } from "../../infra_schema";
+import { ROUTES } from "../../routes";
 
 const clickHandler = (data: any, utilities: ActionUtilities) => {
     console.log('\n --- \n');
@@ -11,10 +11,6 @@ const clickHandler = (data: any, utilities: ActionUtilities) => {
 
 const SignUpScreen: BaseScreen = {
     getScreenData: (initData: any) => {
-        console.log('\n --- \n');
-        console.log('getScreenData GETTING CALLED IN SIGN UP WITH INIT DATA: ', initData);
-        console.log('\n --- \n');
-        
         return {
             layout: [
                 {
