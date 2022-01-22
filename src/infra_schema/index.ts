@@ -5,6 +5,11 @@ export type NavigationModule = {
     pop: () => void;
 }
 
+export type DataStoreManipulationModule = {
+    setInDataStore: (changes: object) => object;
+    getFromDataStore: (path: string) => any;
+}
+
 export enum SCREEN_POSITION {
     FIXED_TOP = 'FIXED_TOP',
     FIXED_BOTTOM = 'FIXED_BOTTOM'
@@ -22,7 +27,8 @@ export type ScreenStructure = {
 }
 
 export type ActionUtilities = {
-    navigationModule: NavigationModule
+    navigationModule: NavigationModule;
+    dataStoreManipulationModule: DataStoreManipulationModule
 }
 
 export type ActionFn = (data: any, utilities: ActionUtilities) => void;

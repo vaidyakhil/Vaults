@@ -21,6 +21,18 @@ const InputTextField: VaultsComponent<InputTextFieldProps> = ({ textValue, place
         setText(updatedText)
     }
 
+    const firstRendering = React.useRef(true);
+    React.useEffect(() => {
+        if (firstRendering.current) {
+            firstRendering.current = false;
+            return;
+        }
+
+        console.log('\n\n');
+        console.log('DEBUG LOG: ', 'InputTextField rendered...');
+        console.log('\n\n');
+    })
+
     React.useEffect(() => {
         if (isFirstRender.current) {
             isFirstRender.current = false;

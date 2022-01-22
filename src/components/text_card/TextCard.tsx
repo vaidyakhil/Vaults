@@ -17,6 +17,18 @@ const styles = StyleSheet.create({
 
 
 const TextCard: VaultsComponent<TextCardProps> = ({ textValue }) => {
+  const firstRendering = React.useRef(true);
+  React.useEffect(() => {
+      if (firstRendering.current) {
+          firstRendering.current = false;
+          return;
+      }
+
+      console.log('\n\n');
+      console.log('DEBUG LOG: ', 'TextCard rendered...');
+      console.log('\n\n');
+  })
+
     return (
         <View style={styles.container}>
             <Text style={styles.hello}>{textValue}</Text>
@@ -24,4 +36,4 @@ const TextCard: VaultsComponent<TextCardProps> = ({ textValue }) => {
     );
 }
 
-export default TextCard;
+export default React.memo(TextCard);

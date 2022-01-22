@@ -80,6 +80,17 @@ const getContainerStyles = (buttonTypeToken: ButtonTypeToken) => {
 }
 
 const Button: VaultsComponent<ButtonProps> = ({ buttonText, buttonTypeToken, tapAction, handleAction }) => {
+  const firstRendering = React.useRef(true);
+  React.useEffect(() => {
+      if (firstRendering.current) {
+          firstRendering.current = false;
+          return;
+      }
+
+      console.log('\n\n');
+      console.log('DEBUG LOG: ', 'TextCard rendered...');
+      console.log('\n\n');
+  })
 
     const onClick = () => {
       if (handleAction && tapAction) {
