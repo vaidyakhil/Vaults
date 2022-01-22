@@ -9,9 +9,6 @@ const clickHandler = (data: any) => {
 
 const LoginScreen: BaseScreen = {
     getScreenData: (initData: any) => {
-        console.log('\n --- \n');
-        console.log('getScreenData GETTING CALLED IN LOGIN WITH INIT DATA: ', initData);
-        console.log('\n --- \n');
         return {
             layout: [
                 {

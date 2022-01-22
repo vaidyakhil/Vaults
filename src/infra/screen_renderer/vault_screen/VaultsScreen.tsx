@@ -4,11 +4,10 @@ import { filter as _filter, difference as _difference, map as _map } from 'lodas
 import { ActionUtilities, LayoutElement, NavigationModule, ScreenRouteData, SCREEN_POSITION } from "../../../infra_schema";
 import { ActionData } from "../../../component_schema";
 import { PropsComponentMap } from "../../../components";
-import { RoutesMap } from "../../../config";  
 import HeaderComponent from "./header_component";
 import FooterComponent from "./footer_component";
 import NavigationModuleImpl from "../../modules/navigation_module";
-
+import ExternalDependencies from "../../external_dependencies";
 
 const styles = StyleSheet.create({
     container: {
@@ -26,7 +25,7 @@ const getUtilitiesObject = ({ navigation }: { navigation: any }): ActionUtilitie
 const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData}; navigation: any }> = ({ route: { params }, navigation}) => {  
     
     const { route, initData } = params;
-    const screen = RoutesMap[route];
+    const screen = ExternalDependencies._routeMap[route];
     const { layout, dataStore } = screen.getScreenData(initData);
 
     const handleAction = (actionData: ActionData) => {
