@@ -12,8 +12,7 @@ export enum VaultsComponentTypes {
 
 export enum ButtonTypeToken {
     PRIMARY_SMALL = 'PRIMARY_SMALL',
-    SECONDARY_SMALL = 'PRIMARY_SMALL',
-
+    SECONDARY_SMALL = 'SECONDARY_SMALL',
     PRIMARY_BIG = 'PRIMARY_BIG',
     SECONDARY_BIG = 'SECONDARY_BIG',
 }

@@ -17,4 +17,4 @@ const NavigationModuleImpl = (navigator: any): NavigationModule => {
     };
 }
 
-export default NavigationModuleImpl;
+export { NavigationModuleImpl };

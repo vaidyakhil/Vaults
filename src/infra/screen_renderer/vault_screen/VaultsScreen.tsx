@@ -6,7 +6,7 @@ import { ActionData } from '../../../component_schema';
 import { PropsComponentMap } from '../../../components';
 import HeaderComponent from './header_component';
 import FooterComponent from './footer_component';
-import NavigationModuleImpl from '../../modules/navigation_module';
+import { NavigationModuleImpl, DataStoreManipulationModuleImpl } from '../../modules';
 import ExternalDependencies from '../../external_dependencies';
 
 const { width, height } = Dimensions.get('window');
@@ -19,9 +19,10 @@ const styles = StyleSheet.create({
     }
 });
 
-const getUtilitiesObject = ({ navigation }: { navigation: any }): ActionUtilities => {
+const getUtilitiesObject = ({ navigation, dataStore, setDataStore }: { navigation: any, dataStore: object, setDataStore: (updatedDataStore: any) => any }): ActionUtilities => {
     return {
-        navigationModule: NavigationModuleImpl(navigation)
+        navigationModule: NavigationModuleImpl(navigation),
+        dataStoreManipulationModule: DataStoreManipulationModuleImpl(dataStore, setDataStore),
     }
 }
 
@@ -29,19 +30,21 @@ const VaultsScreen: React.FunctionComponent<{ route: { params: ScreenRouteData};
     
     const { route, initData } = params;
     const screen = ExternalDependencies._routeMap[route];
-    const { layout, dataStore } = screen.getScreenData(initData);
+    const { layout: layoutProps, dataStore: dataStoreProps } = screen.getScreenData(initData);
+
+    const [dataStore, setDataStore] = React.useState(dataStoreProps);
 
     const handleAction = (actionData: ActionData) => {
         const { actionMap } = screen;
-        const utilities = getUtilitiesObject({ navigation });
+        const utilities = getUtilitiesObject({ navigation, dataStore, setDataStore });
         if (actionMap && actionData.type && actionMap[actionData.type]) {
             actionMap[actionData.type](actionData.data, utilities);
         }
     }
     
-    const headerItems = _filter(layout, { position: SCREEN_POSITION.FIXED_TOP });
-    const footerItems = _filter(layout, { position: SCREEN_POSITION.FIXED_BOTTOM });
-    const listItems = _difference(layout, [...headerItems, ...footerItems]);
+    const headerItems = _filter(layoutProps, { position: SCREEN_POSITION.FIXED_TOP });
+    const footerItems = _filter(layoutProps, { position: SCREEN_POSITION.FIXED_BOTTOM });
+    const listItems = _difference(layoutProps, [...headerItems, ...footerItems]);
 
 
     const renderItem = ({ item }: { item: LayoutElement, index?: number }) => {
