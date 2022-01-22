@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
+import { Dimensions, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import { filter as _filter, difference as _difference, map as _map } from 'lodash-es';
 import { ActionUtilities, LayoutElement, ScreenRouteData, SCREEN_POSITION } from '../../../infra_schema';
 import { ActionData } from '../../../component_schema';
@@ -9,9 +9,12 @@ import FooterComponent from './footer_component';
 import NavigationModuleImpl from '../../modules/navigation_module';
 import ExternalDependencies from '../../external_dependencies';
 
+const { width, height } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width,
+        height,
         backgroundColor: '#ffffff'
     }
 });
