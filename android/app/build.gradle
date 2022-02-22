@@ -62,6 +62,7 @@ dependencies {
         debugImplementation files(hermesPath + "hermes-debug.aar")
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
+        // javascript engine: javascript-core
         implementation jscFlavor
     }
 }

@@ -7,7 +7,7 @@
     "android": "npx react-native run-android",
     "start": "npx react-native start --reset-cache",
     "adb-reverse": "adb reverse tcp:8081 tcp:8081",
-    "tsc": "npx tsc",
+    "tsc": "tsc",
     "lint": "npx eslint src/",
     "lint-fix": "npx eslint src/ --fix"
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
+    "@types/lodash-es": "^4.17.6",
     "@types/react": "^17.0.38",
     "@types/react-native": "^0.66.12",
     "@types/react-test-renderer": "^17.0.1",
