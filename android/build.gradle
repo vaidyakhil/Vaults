@@ -1,4 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+// The dependcies mentioned in this block are not project dependecies but the build script dependecies, 
+// this script needs them to be able to run
 buildscript {
     ext {
         compile_sdk = 32
