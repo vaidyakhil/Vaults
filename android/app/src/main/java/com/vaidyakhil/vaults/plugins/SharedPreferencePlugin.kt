@@ -1,15 +1,15 @@
-package com.vaidyakhil.vaults.utility
+package com.vaidyakhil.vaults.plugins
 
 import android.content.Context
 import android.content.SharedPreferences
 import com.vaidyakhil.vaults.AppConstants
 
-enum class PreferenceFile(val file: String) {
+enum class PreferenceFile(name: String) {
     DEFAULT(AppConstants.DEFAULT_PREFERENCE_FILE)
 }
 
-class SharedPreferenceManager(file: PreferenceFile, context: Context) {
-    private val sharedPrefs: SharedPreferences = context.applicationContext.getSharedPreferences(file.file, Context.MODE_PRIVATE)
+class SharedPreferencePlugin (file: PreferenceFile, context: Context) {
+    private val sharedPrefs: SharedPreferences = context.applicationContext.getSharedPreferences(file.name, Context.MODE_PRIVATE)
 
     fun getBoolean(key: String, defaultValue: Boolean = false): Boolean {
         if (sharedPrefs.contains(key)) {

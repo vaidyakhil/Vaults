@@ -1,13 +1,9 @@
 import { ButtonTypeToken, KeyboardType, VaultsComponentTypes } from '../../component_schema';
 import { ActionUtilities, BaseScreen, SCREEN_POSITION } from '../../infra_schema';
 
-const clickHandler = (data: any, utilities: ActionUtilities) => { 
+const clickHandler = async (data: any, utilities: ActionUtilities) => { 
     const path = 'footer.buttonTypeToken';
-    const oldToken = utilities.dataStoreManipulationModule.getFromDataStore(path);
-    const updatedToken = oldToken === ButtonTypeToken.SECONDARY_SMALL ? ButtonTypeToken.PRIMARY_BIG : ButtonTypeToken.SECONDARY_SMALL;
-
-    console.log('click handler: ', oldToken, '  ', updatedToken);
-    utilities.dataStoreManipulationModule.setInDataStore({ [path]: updatedToken});
+    const oldToken = await utilities.keyValueStoreModule.setBoolean("isUserLoggedIn", true);
 }
 
 const onTextChangeListener = (data: { _textValue: string }, utilities: ActionUtilities) => {

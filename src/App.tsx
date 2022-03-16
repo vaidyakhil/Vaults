@@ -23,7 +23,8 @@ const getInitialScreenRouteData = (props: AppProps): ScreenRouteData => {
 
 const App: React.FunctionComponent<AppProps> = (props) => {
   const screenProps = getInitialScreenRouteData(props);
-
+  console.log("screenProps: ", screenProps );
+  
   return (
     <ScreensContainer {...{ screeeData: screenProps, _routeMap: RoutesMap }}/>
   )
