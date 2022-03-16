@@ -7,7 +7,8 @@ export enum ColorTokens {
 export enum VaultsComponentTypes {
     TEXT_CARD = 'TEXT_CARD',
     BUTTON = 'BUTTON',
-    INPUT_TEXT_FIELD = 'INPUT_TEXT_FIELD'
+    INPUT_TEXT_FIELD = 'INPUT_TEXT_FIELD',
+    MOVE_BALL = 'MOVE_BALL'
 }
 
 export enum ButtonTypeToken {
