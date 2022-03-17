@@ -16,7 +16,7 @@ const getInitialScreenRouteData = (props: AppProps): ScreenRouteData => {
   }
 
   return {
-    route: ROUTES.LOGIN_SCREEN,
+    route: ROUTES.LISTING_SCREEN,
     initData: {}
   }
 }; 
