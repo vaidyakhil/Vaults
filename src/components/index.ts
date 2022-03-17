@@ -4,6 +4,8 @@ import { TextCard }  from './text_card';
 import { Button } from './button';
 import { InputTextField } from './input_text_field';
 import { MoveBall } from './move_ball';
+import { Tag } from './tag';
+import { DocumentCard } from './document_card';
 
 export {
     PropsComponentMap,
@@ -11,5 +13,7 @@ export {
     TextCard,
     Button,
     InputTextField,
-    MoveBall
+    MoveBall,
+    Tag ,
+    DocumentCard
 };
