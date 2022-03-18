@@ -1,10 +1,8 @@
 import { ButtonTypeToken, VaultsComponentTypes } from '../../component_schema';
-import { BaseScreen, SCREEN_POSITION } from '../../infra_schema';
+import { ActionUtilities, BaseScreen, SCREEN_POSITION } from '../../infra_schema';
 
-const clickHandler = (data: any) => {
-    console.log('\n --- \n');
-    console.log('CLICK HANDLER GETTING CALLED FROM LOGIN');
-    console.log('\n --- \n');    
+const clickHandler = async (data: any, utilities: ActionUtilities) => {
+    const oldToken = await utilities.keyValueStoreModule.setBoolean("isUserLoggedIn", false);
 }
 
 const LoginScreen: BaseScreen = {

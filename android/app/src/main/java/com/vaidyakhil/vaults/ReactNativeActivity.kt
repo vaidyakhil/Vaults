@@ -3,8 +3,8 @@ package com.vaidyakhil.vaults
 import android.os.Bundle
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
-import com.vaidyakhil.vaults.utility.PreferenceFile
-import com.vaidyakhil.vaults.utility.SharedPreferenceManager
+import com.vaidyakhil.vaults.plugins.PreferenceFile
+import com.vaidyakhil.vaults.plugins.SharedPreferencePlugin
 
 class ReactNativeActivity : ReactActivity() {
 
@@ -27,7 +27,7 @@ class ReactNativeActivity : ReactActivity() {
     }
 
     private fun getApplicationInitialProps(): Bundle {
-        val sharedPrefs = SharedPreferenceManager(PreferenceFile.DEFAULT, this)
+        val sharedPrefs = SharedPreferencePlugin(PreferenceFile.DEFAULT, this)
         return Bundle().apply {
             putBoolean(IS_USER_LOGGED_IN, sharedPrefs.getBoolean(IS_USER_LOGGED_IN))
         }

@@ -3,6 +3,7 @@ package com.vaidyakhil.vaults
 import android.app.Application
 import com.facebook.react.*
 import com.facebook.soloader.SoLoader
+import com.vaidyakhil.vaults.reactPackage.VaultReactPackage
 
 class MainApplication: Application(), ReactApplication {
     companion object {
@@ -20,7 +21,12 @@ class MainApplication: Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> {
             // Packages that cannot be autolinked yet can be added manually here, for example:
             // packages.add(new MyReactNativePackage());
-            return PackageList(this).packages
+            return mutableListOf<ReactPackage>().apply {
+                addAll(PackageList(this@MainApplication).packages)
+                add(VaultReactPackage())
+            }
+
+
         }
 
         override fun getJSMainModuleName(): String {

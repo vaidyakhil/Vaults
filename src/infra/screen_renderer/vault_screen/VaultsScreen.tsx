@@ -6,7 +6,7 @@ import { ActionData } from '../../../component_schema';
 import { PropsComponentMap } from '../../../components';
 import HeaderComponent from './header_component';
 import FooterComponent from './footer_component';
-import { NavigationModuleImpl, DataStoreManipulationModuleImpl } from '../../modules';
+import { NavigationModuleImpl, DataStoreManipulationModuleImpl, KeyValueStoreModuleImpl } from '../../modules';
 import ExternalDependencies from '../../external_dependencies';
 
 const { width, height } = Dimensions.get('window');
@@ -23,6 +23,7 @@ const getUtilitiesObject = ({ navigation, dataStore, setDataStore }: { navigatio
     return {
         navigationModule: NavigationModuleImpl(navigation),
         dataStoreManipulationModule: DataStoreManipulationModuleImpl(dataStore, setDataStore),
+        keyValueStoreModule: KeyValueStoreModuleImpl
     }
 }
 
