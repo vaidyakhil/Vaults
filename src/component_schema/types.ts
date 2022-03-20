@@ -13,7 +13,8 @@ export enum VaultsComponentTypes {
     INPUT_TEXT_FIELD = 'INPUT_TEXT_FIELD',
     MOVE_BALL = 'MOVE_BALL',
     TAG = 'TAG',
-    DOCUMENT_CARD = 'DOCUMENT_CARD'
+    DOCUMENT_CARD = 'DOCUMENT_CARD',
+    TOAST_STACK = 'TOAST_STACK'
 }
 
 export enum ButtonTypeToken {

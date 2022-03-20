@@ -6,6 +6,7 @@ import { InputTextField } from './input_text_field';
 import { MoveBall } from './move_ball';
 import { Tag } from './tag';
 import { TextCard } from './text_card';
+import { ToastStack } from './toast_stack';
 
 const PropsComponentMap: { [key in VaultsComponentTypes]: React.FunctionComponent<any>} = {
     [VaultsComponentTypes.TEXT_CARD]: TextCard,
@@ -14,6 +15,7 @@ const PropsComponentMap: { [key in VaultsComponentTypes]: React.FunctionComponen
     [VaultsComponentTypes.MOVE_BALL]: MoveBall,
     [VaultsComponentTypes.TAG]: Tag,
     [VaultsComponentTypes.DOCUMENT_CARD]: DocumentCard,
+    [VaultsComponentTypes.TOAST_STACK]: ToastStack
 }
 
 export default PropsComponentMap;
