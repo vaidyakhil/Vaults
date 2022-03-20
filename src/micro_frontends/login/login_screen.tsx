@@ -10,27 +10,12 @@ const LoginScreen: BaseScreen = {
         return {
             layout: [
                 {
-                    id: 'header',
-                    type: VaultsComponentTypes.TEXT_CARD,
-                    position: SCREEN_POSITION.FIXED_TOP
-                },
-                {
-                    id: 'footer',
-                    type: VaultsComponentTypes.BUTTON,
-                    position: SCREEN_POSITION.FIXED_BOTTOM
+                    id: 'moveBall',
+                    type: VaultsComponentTypes.MOVE_BALL
                 },
             ],
             dataStore: {
-                header: {
-                    textValue: 'THIS IS lOGIN SCREEN'
-                },
-                footer: {
-                    buttonText: 'Submit',
-                    tapAction: {
-                        type: 'ON_SUBMIT'
-                    },
-                    buttonTypeToken: ButtonTypeToken.PRIMARY_BIG
-                },
+                moveBall: {},
             }
         }
     },
