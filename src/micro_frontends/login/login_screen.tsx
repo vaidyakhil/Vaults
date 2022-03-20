@@ -10,12 +10,12 @@ const LoginScreen: BaseScreen = {
         return {
             layout: [
                 {
-                    id: 'moveBall',
-                    type: VaultsComponentTypes.MOVE_BALL
+                    id: 'toastStack',
+                    type: VaultsComponentTypes.TOAST_STACK
                 },
             ],
             dataStore: {
-                moveBall: {},
+                toastStack: {},
             }
         }
     },

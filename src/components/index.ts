@@ -6,6 +6,7 @@ import { InputTextField } from './input_text_field';
 import { MoveBall } from './move_ball';
 import { Tag } from './tag';
 import { DocumentCard } from './document_card';
+import { ToastStack } from './toast_stack';
 
 export {
     PropsComponentMap,
@@ -15,5 +16,6 @@ export {
     InputTextField,
     MoveBall,
     Tag ,
-    DocumentCard
+    DocumentCard,
+    ToastStack
 };
